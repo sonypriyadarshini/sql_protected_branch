@@ -565,6 +565,10 @@
     "name" : "mod1",
     "type" : "Model",
     "syncedOnce" : false
+  }, {
+    "name" : "mod2",
+    "type" : "Model",
+    "syncedOnce" : false
   } ],
   "frontEndLanguage" : "sql"
 }
