@@ -1,0 +1,38 @@
+---
+version: 2
+sources:
+- name: "hive_metastore.upload_latest"
+  database: "hive_metastore"
+  schema: "upload_latest"
+  config:
+    enabled: true
+  tables:
+  - name: "jsonnew"
+    columns:
+    - name: "account_flags"
+      dataType:
+        type: "String"
+    - name: "account_open_date"
+      dataType:
+        type: "String"
+    - name: "country_code"
+      dataType:
+        type: "String"
+    - name: "customer_id"
+      dataType:
+        type: "String"
+    - name: "email"
+      dataType:
+        type: "String"
+    - name: "first_name"
+      dataType:
+        type: "String"
+    - name: "last_name"
+      dataType:
+        type: "String"
+    - name: "phone"
+      dataType:
+        type: "String"
+    - name: "_rescued_data"
+      dataType:
+        type: "String"
