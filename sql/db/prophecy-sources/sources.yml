@@ -1,38 +1,61 @@
+---
 version: 2
-
 sources:
-- database: hive_metastore
-  name: hive_metastore.upload_latest
+- name: "hive_metastore.upload_latest"
+  database: "hive_metastore"
+  schema: "upload_latest"
   config:
     enabled: true
-  schema: upload_latest
   tables:
-  - name: jsonnew
+  - name: "jsonnew"
     columns:
-    - name: account_flags
+    - name: "account_flags"
       dataType:
-        type: String
-    - name: account_open_date
+        type: "String"
+    - name: "account_open_date"
       dataType:
-        type: String
-    - name: country_code
+        type: "String"
+    - name: "country_code"
       dataType:
-        type: String
-    - name: customer_id
+        type: "String"
+    - name: "customer_id"
       dataType:
-        type: String
-    - name: email
+        type: "String"
+    - name: "email"
       dataType:
-        type: String
-    - name: first_name
+        type: "String"
+    - name: "first_name"
       dataType:
-        type: String
-    - name: last_name
+        type: "String"
+    - name: "last_name"
       dataType:
-        type: String
-    - name: phone
+        type: "String"
+    - name: "phone"
       dataType:
-        type: String
-    - name: _rescued_data
+        type: "String"
+    - name: "_rescued_data"
       dataType:
-        type: String
+        type: "String"
+  - name: "ordedetails"
+    columns:
+    - name: "order_id"
+      dataType:
+        type: "Integer"
+    - name: "customer_id"
+      dataType:
+        type: "Integer"
+    - name: "order_status"
+      dataType:
+        type: "String"
+    - name: "order_category"
+      dataType:
+        type: "String"
+    - name: "order_date"
+      dataType:
+        type: "Date"
+    - name: "amount"
+      dataType:
+        type: "Double"
+    - name: "_rescued_data"
+      dataType:
+        type: "String"
