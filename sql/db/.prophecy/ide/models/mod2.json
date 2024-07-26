@@ -34,88 +34,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "TCQaXb62",
-          "schema" : {
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_status",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_category",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
-              "name" : "_rescued_data",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "ordedetails"
         } ],
         "outputs" : [ {
           "id" : "AqGUERet",
-          "schema" : {
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_status",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_category",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Float"
-              }
-            }, {
-              "name" : "_rescued_data",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -145,45 +67,6 @@
         "inputs" : [ ],
         "outputs" : [ {
           "id" : "07f95tm6NMJ0F8ob1mye3",
-          "schema" : {
-            "providerType" : "databricks",
-            "fields" : [ {
-              "name" : "order_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "customer_id",
-              "dataType" : {
-                "type" : "Integer"
-              }
-            }, {
-              "name" : "order_status",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_category",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "order_date",
-              "dataType" : {
-                "type" : "Date"
-              }
-            }, {
-              "name" : "amount",
-              "dataType" : {
-                "type" : "Double"
-              }
-            }, {
-              "name" : "_rescued_data",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
