@@ -1,0 +1,32 @@
+---
+version: 2
+sources:
+- name: "hive_metastore.upload_latest"
+  database: "hive_metastore"
+  schema: "upload_latest"
+  config:
+    enabled: true
+  tables:
+  - name: "ordedetails"
+    columns:
+    - name: "order_id"
+      dataType:
+        type: "Integer"
+    - name: "customer_id"
+      dataType:
+        type: "Integer"
+    - name: "order_status"
+      dataType:
+        type: "String"
+    - name: "order_category"
+      dataType:
+        type: "String"
+    - name: "order_date"
+      dataType:
+        type: "Date"
+    - name: "amount"
+      dataType:
+        type: "Double"
+    - name: "_rescued_data"
+      dataType:
+        type: "String"

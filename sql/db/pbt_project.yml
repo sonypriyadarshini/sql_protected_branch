@@ -23,7 +23,45 @@ functions:
   airflowFunctions: {}
   businessRules: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/mod2:
+    name: mod2
+    schema:
+      providerType: Databricks
+      fields:
+      - name: order_id
+        dataType:
+          type: Integer
+      - name: customer_id
+        dataType:
+          type: Integer
+      - name: order_status
+        dataType:
+          type: String
+      - name: order_category
+        dataType:
+          type: String
+      - name: order_date
+        dataType:
+          type: Date
+      - name: amount
+        dataType:
+          type: Float
+      - name: _rescued_data
+        dataType:
+          type: String
+    description: null
+    author: sony+apoi@prophecy.io
+    files:
+    - models/mod2.sql
+    - .prophecy/ide/models/mod2.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-07-26 04:53:11'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
@@ -37,7 +75,43 @@ sqlMacros:
     - .prophecy/ide/macros/generate_schema_name.json
     createdAt: '2024-07-26 04:51:02'
 sqlSeeds: {}
-sqlSources: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/hive_metastore_upload_latest:
+    name: hive_metastore.upload_latest
+    description: null
+    author: sony+apoi@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2024-07-26 04:53:22'
+    tables:
+    - name: ordedetails
+      schema:
+        providerType: databricks
+        fields:
+        - name: order_id
+          dataType:
+            type: Integer
+        - name: customer_id
+          dataType:
+            type: Integer
+        - name: order_status
+          dataType:
+            type: String
+        - name: order_category
+          dataType:
+            type: String
+        - name: order_date
+          dataType:
+            type: Date
+        - name: amount
+          dataType:
+            type: Double
+        - name: _rescued_data
+          dataType:
+            type: String
+      description: null
+      author: sony+apoi@prophecy.io
+      createdAt: '2024-07-26 04:53:22'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline

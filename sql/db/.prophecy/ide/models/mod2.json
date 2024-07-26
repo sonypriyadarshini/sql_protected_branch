@@ -1,0 +1,202 @@
+{
+  "id" : "mod2",
+  "metainfo" : {
+    "label" : "mod2",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "mod2##Fm0fUzsi" : {
+      "id" : "mod2##Fm0fUzsi",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "mod2",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM ordedetails\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "TCQaXb62",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "ordedetails"
+        } ],
+        "outputs" : [ {
+          "id" : "AqGUERet",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "uYV54kVXVVQ7DrjkE9z_w" : {
+      "id" : "uYV54kVXVVQ7DrjkE9z_w",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "ordedetails",
+        "slug" : "ordedetails",
+        "x" : -588.4000244140625,
+        "y" : -200.60000610351562,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "ordedetails",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.upload_latest",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "07f95tm6NMJ0F8ob1mye3",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "jvSZd5Xe7QyPKwgtvPUyo",
+    "source" : "uYV54kVXVVQ7DrjkE9z_w",
+    "sourcePort" : "07f95tm6NMJ0F8ob1mye3",
+    "target" : "mod2##Fm0fUzsi",
+    "targetPort" : "TCQaXb62"
+  } ],
+  "component" : "Model"
+}
