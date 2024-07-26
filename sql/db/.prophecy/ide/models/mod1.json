@@ -1,0 +1,232 @@
+{
+  "id" : "mod1",
+  "metainfo" : {
+    "label" : "mod1",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "mod1##AHty3avm" : {
+      "id" : "mod1##AHty3avm",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "mod1",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM jsonnew\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bzdZnpB9",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "jsonnew"
+        } ],
+        "outputs" : [ {
+          "id" : "Ql1MbmYI",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "Qj26Aa3C4Nwbw-mE6wXCD" : {
+      "id" : "Qj26Aa3C4Nwbw-mE6wXCD",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "jsonnew",
+        "slug" : "jsonnew",
+        "x" : -588.4000244140625,
+        "y" : -168.1999969482422,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "jsonnew",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.upload_latest",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "M4aKYX-bH7is9XXiwwJnc",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "account_flags",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "account_open_date",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "country_code",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "email",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "first_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "last_name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "phone",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "ZK5A9Wj41sZjOiYSlDFJL",
+    "source" : "Qj26Aa3C4Nwbw-mE6wXCD",
+    "sourcePort" : "M4aKYX-bH7is9XXiwwJnc",
+    "target" : "mod1##AHty3avm",
+    "targetPort" : "bzdZnpB9"
+  } ],
+  "component" : "Model"
+}
