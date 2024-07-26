@@ -1,32 +1,38 @@
----
 version: 2
+
 sources:
-- name: "hive_metastore.upload_latest"
-  database: "hive_metastore"
-  schema: "upload_latest"
+- database: hive_metastore
+  name: hive_metastore.upload_latest
   config:
     enabled: true
+  schema: upload_latest
   tables:
-  - name: "ordedetails"
+  - name: jsonnew
     columns:
-    - name: "order_id"
+    - name: account_flags
       dataType:
-        type: "Integer"
-    - name: "customer_id"
+        type: String
+    - name: account_open_date
       dataType:
-        type: "Integer"
-    - name: "order_status"
+        type: String
+    - name: country_code
       dataType:
-        type: "String"
-    - name: "order_category"
+        type: String
+    - name: customer_id
       dataType:
-        type: "String"
-    - name: "order_date"
+        type: String
+    - name: email
       dataType:
-        type: "Date"
-    - name: "amount"
+        type: String
+    - name: first_name
       dataType:
-        type: "Double"
-    - name: "_rescued_data"
+        type: String
+    - name: last_name
       dataType:
-        type: "String"
+        type: String
+    - name: phone
+      dataType:
+        type: String
+    - name: _rescued_data
+      dataType:
+        type: String
