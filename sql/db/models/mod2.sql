@@ -1,4 +1,4 @@
-WITH ordedetails AS (
+WITH ordedetails_1 AS (
 
   SELECT * 
   
@@ -8,4 +8,4 @@ WITH ordedetails AS (
 
 SELECT *
 
-FROM ordedetails
+FROM ordedetails_1

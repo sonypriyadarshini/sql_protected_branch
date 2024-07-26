@@ -139,6 +139,34 @@ sqlSources:
       description: null
       author: sony+apoi@prophecy.io
       createdAt: '2024-07-26 04:54:55'
+    - name: ordedetails
+      schema:
+        providerType: databricks
+        fields:
+        - name: order_id
+          dataType:
+            type: Integer
+        - name: customer_id
+          dataType:
+            type: Integer
+        - name: order_status
+          dataType:
+            type: String
+        - name: order_category
+          dataType:
+            type: String
+        - name: order_date
+          dataType:
+            type: Date
+        - name: amount
+          dataType:
+            type: Double
+        - name: _rescued_data
+          dataType:
+            type: String
+      description: null
+      author: sony+apoi@prophecy.io
+      createdAt: '2024-07-26 04:58:24'
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline

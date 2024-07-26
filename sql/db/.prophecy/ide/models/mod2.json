@@ -24,7 +24,7 @@
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM ordedetails\n",
+        "query" : "SELECT * \n\nFROM ordedetails_1\n",
         "isModel" : true,
         "incrementalKey" : false,
         "incremental" : {
@@ -34,24 +34,102 @@
       "ports" : {
         "inputs" : [ {
           "id" : "TCQaXb62",
-          "slug" : "ordedetails"
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "ordedetails_1"
         } ],
         "outputs" : [ {
           "id" : "AqGUERet",
+          "schema" : {
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
     },
-    "uYV54kVXVVQ7DrjkE9z_w" : {
-      "id" : "uYV54kVXVVQ7DrjkE9z_w",
+    "Eyy_RKw_3GVxAAX-d7A5c" : {
+      "id" : "Eyy_RKw_3GVxAAX-d7A5c",
       "component" : "Source",
       "metadata" : {
-        "label" : "ordedetails",
-        "slug" : "ordedetails",
-        "x" : -588.4000244140625,
-        "y" : -200.60000610351562,
+        "label" : "ordedetails_1",
+        "slug" : "ordedetails_1",
+        "x" : -880,
+        "y" : -320,
         "phase" : 0
       },
       "properties" : {
@@ -66,7 +144,46 @@
       "ports" : {
         "inputs" : [ ],
         "outputs" : [ {
-          "id" : "07f95tm6NMJ0F8ob1mye3",
+          "id" : "BDTaYBXR7zCia8OCd0n9b",
+          "schema" : {
+            "providerType" : "databricks",
+            "fields" : [ {
+              "name" : "order_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "customer_id",
+              "dataType" : {
+                "type" : "Integer"
+              }
+            }, {
+              "name" : "order_status",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_category",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "order_date",
+              "dataType" : {
+                "type" : "Date"
+              }
+            }, {
+              "name" : "amount",
+              "dataType" : {
+                "type" : "Double"
+              }
+            }, {
+              "name" : "_rescued_data",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false,
@@ -75,9 +192,9 @@
     }
   },
   "connections" : [ {
-    "id" : "jvSZd5Xe7QyPKwgtvPUyo",
-    "source" : "uYV54kVXVVQ7DrjkE9z_w",
-    "sourcePort" : "07f95tm6NMJ0F8ob1mye3",
+    "id" : "yPn5xxC6w1beHB2Jkcaj5",
+    "source" : "Eyy_RKw_3GVxAAX-d7A5c",
+    "sourcePort" : "BDTaYBXR7zCia8OCd0n9b",
     "target" : "mod2##Fm0fUzsi",
     "targetPort" : "TCQaXb62"
   } ],
